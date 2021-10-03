@@ -1,3 +1,5 @@
+# Ultimate Frisbee Hand Signals
+
 This is an app for learning ultimate frisbee's hand signals. You can read more about ultimate frisbee from [World Flying Disc Federation's website.](https://wfdf.sport/)
 
 Currently it is still under development, as is this documentation, so some quirks might be found :) 
