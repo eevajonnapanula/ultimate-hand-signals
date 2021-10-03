@@ -1,6 +1,10 @@
+import { useContext } from "react"
 import translations from "../data/translations"
+import { LanguageContext } from "../pages/_app"
 
 const Layout = ({ children }) => {
+  const { changeLanguage } = useContext(LanguageContext)
+
   return (
     <>
       <header>
@@ -10,12 +14,12 @@ const Layout = ({ children }) => {
             <li>
               <a href="/signals">{translations.fi.handSignals}</a>
             </li>
-            <li>Quiz</li>
             <li>
               <a href="/about">About</a>
             </li>
           </ul>
         </nav>
+        <button onClick={changeLanguage}>Change Lang</button>
       </header>
       <main>{children}</main>
       <footer>
