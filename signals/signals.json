@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Foul",
+    "slug": "foul",
+    "image": "https://placekitten.com/360/440",
+    "description": "Hold one arm straight out and chop the other forearm across the straight arm"
+  },
+  {
+    "name": "Violation",
+    "slug": "violation",
+    "image": "https://placekitten.com/360/440",
+    "description": "Hands above head forming a V, closed fists"
+  },
+  {
+    "name": "Goal",
+    "slug": "goal",
+    "image": "https://placekitten.com/360/440",
+    "description": "Raise both arms, fully extended, straight up, palms facing inwards"
+  },
+  {
+    "name": "Contest",
+    "slug": "uncontest",
+    "image": "https://placekitten.com/360/440",
+    "description": "Two fists bumped together in front of chest, back of hands facing outward"
+  },
+  {
+    "name": "Uncontested",
+    "slug": "uncontested",
+    "image": "https://placekitten.com/360/440",
+    "description": "Forearms extended in front of body, elbows tight against torso with palms facing upwards"
+  },
+  {
+    "name": "Retracted / Play on",
+    "slug": "retracted-play-on",
+    "image": "https://placekitten.com/360/440",
+    "description": "Sweeping crossover motion with both arms extended down in front of body"
+  },
+  {
+    "name": "In / Out-of-bounds – Out of end zone",
+    "slug": "in-out-of-bounds",
+    "image": "https://placekitten.com/360/440",
+    "description": "Point with one arm extended, flat palm, thumb parallel to fingers, towards playing field (in) or away from playing field (out)"
+  },
+  {
+    "name": "Disc down",
+    "slug": "disc-down",
+    "image": "https://placekitten.com/360/440",
+    "description": "Index finger straight arm pointing down at 45 degree"
+  },
+  {
+    "name": "Disc up",
+    "slug": "disc-up",
+    "image": "https://placekitten.com/360/440",
+    "description": "Elbow down forearm vertical index finger pointing upward"
+  },
+  {
+    "name": "Pick",
+    "slug": "pick",
+    "image": "https://placekitten.com/360/440",
+    "description": "Arms raised, elbows bent, fists facing head"
+  },
+  {
+    "name": "Travel",
+    "slug": "travel",
+    "image": "https://placekitten.com/360/440",
+    "description": "Closed fists, rotate wrists around in a vertical circle"
+  }
+]
