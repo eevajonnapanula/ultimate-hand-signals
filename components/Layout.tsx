@@ -1,12 +1,14 @@
+import translations from "../data/translations"
+
 const Layout = ({ children }) => {
   return (
     <>
       <header>
-        <h1>Ultimate frisbee hand signals</h1>
+        <h1>{translations.fi.siteHeading}</h1>
         <nav>
           <ul className="nav-list">
             <li>
-              <a href="/signals">Signals</a>
+              <a href="/signals">{translations.fi.handSignals}</a>
             </li>
             <li>Quiz</li>
             <li>
@@ -16,9 +18,14 @@ const Layout = ({ children }) => {
         </nav>
       </header>
       <main>{children}</main>
-      <footer></footer>
+      <footer>
+        <p>
+          Created with lots of 💖 and ☕️ by{" "}
+          <a href="https://eevis.codes">Eevis</a>.
+        </p>
+      </footer>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
