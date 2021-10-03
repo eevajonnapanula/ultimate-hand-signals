@@ -15,19 +15,14 @@ const Layout = ({ children }) => {
               <a href="/signals">{translations.handSignals}</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <a href="/about">{translations.about}</a>
             </li>
           </ul>
         </nav>
         <button onClick={changeLanguage}>Change Lang</button>
       </header>
       <main>{children}</main>
-      <footer>
-        <p>
-          Created with lots of 💖 and ☕️ by{" "}
-          <a href="https://eevis.codes">Eevis</a>.
-        </p>
-      </footer>
+      <footer>{translations.footer}</footer>
     </>
   )
 }

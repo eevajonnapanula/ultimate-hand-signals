@@ -1,5 +1,4 @@
 import signals from "../data/signals"
-import translations from "../data/translations"
 import Seo from "../components/Seo"
 import { useTranslations } from "../hooks/useTranslations"
 import { useContext } from "react"
