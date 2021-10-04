@@ -1,6 +1,6 @@
 import { createContext, useMemo, useState } from 'react'
 import '../index.css'
-import Layout from '../components/Layout'
+import Layout from '../components/Layout/Layout'
 import { AppComponent } from 'next/dist/shared/lib/router/router'
 
 export const LanguageContext = createContext({
