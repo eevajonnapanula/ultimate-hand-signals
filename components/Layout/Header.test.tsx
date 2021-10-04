@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import { LanguageWrapper } from '../../test-utils/utils'
+import { LanguageWrapper } from '../../utils/test-utils'
 import Header from './Header'
 
 describe('Header', () => {

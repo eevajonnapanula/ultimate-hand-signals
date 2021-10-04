@@ -1,31 +1,21 @@
 import { GetServerSideProps, NextPage } from 'next'
-import Image from 'next/image'
 import { useContext } from 'react'
+import Signal from '../components/pages/Signal/Signal'
 import Seo from '../components/Seo'
-import signals, { Signal } from '../data/signals'
-import { useTranslations } from '../hooks/useTranslations'
-import { LanguageContext } from './_app'
+import signals, { Signal as SignalType } from '../data/signals'
+import { LanguageContext } from '../utils/languageContext'
 
 interface SignalProps {
-  signal: Signal
+  signal: SignalType
 }
 
 const SignalPage: NextPage<SignalProps> = ({ signal }) => {
-  const translations = useTranslations()
   const { language } = useContext(LanguageContext)
-  if (!signal) {
-    return <section>No signal on that name</section>
-  }
 
   return (
     <>
       <Seo title={signal.translations[language].name} />
-      <section className="signal-details">
-        <h2>{signal && signal?.translations[language].name}</h2>
-        <Image src={signal.image} alt="" />
-        <h3>{translations.description}</h3>
-        <p>{signal.translations[language].description}</p>
-      </section>
+      <Signal signal={signal} />
     </>
   )
 }

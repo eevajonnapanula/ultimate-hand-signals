@@ -1,4 +1,4 @@
-import { LanguageContext } from '../pages/_app'
+import { LanguageContext } from './languageContext'
 
 const changeLanguageFunction = jest.fn()
 interface LanguageWrapperProps {

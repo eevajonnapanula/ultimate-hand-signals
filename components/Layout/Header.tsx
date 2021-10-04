@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import Link from 'next/link'
 import { useTranslations } from '../../hooks/useTranslations'
-import { LanguageContext } from '../../pages/_app'
+import { LanguageContext } from '../../utils/languageContext'
 
 const Header = (): JSX.Element => {
   const { changeLanguage } = useContext(LanguageContext)

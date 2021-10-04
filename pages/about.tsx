@@ -1,15 +1,16 @@
 import { NextPage } from 'next'
+import About from '../components/pages/About/About'
 import Seo from '../components/Seo'
 import { useTranslations } from '../hooks/useTranslations'
 
-const About: NextPage = () => {
+const AboutPage: NextPage = () => {
   const translations = useTranslations()
   return (
     <>
-      <Seo title="About" />
-      {translations.aboutPage}
+      <Seo title={translations.about} />
+      <About />
     </>
   )
 }
 
-export default About
+export default AboutPage

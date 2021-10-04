@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import translations, { Translations as TranslationsType } from '../data/translations'
-import { LanguageContext } from '../pages/_app'
+import { LanguageContext } from '../utils/languageContext'
 
 export const useTranslations = (): TranslationsType => {
   const { language } = useContext(LanguageContext)

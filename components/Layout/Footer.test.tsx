@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { LanguageWrapper } from '../../test-utils/utils'
+import { LanguageWrapper } from '../../utils/test-utils'
 import Footer from './Footer'
 
 describe('Footer', () => {

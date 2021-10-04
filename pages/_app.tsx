@@ -1,12 +1,8 @@
-import { createContext, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import '../index.css'
 import Layout from '../components/Layout/Layout'
 import { AppComponent } from 'next/dist/shared/lib/router/router'
-
-export const LanguageContext = createContext({
-  language: 'fi',
-  changeLanguage: undefined
-})
+import { LanguageContext } from '../utils/languageContext'
 
 const CustomApp: AppComponent = ({ Component, pageProps }) => {
   const storedLanguage = typeof window !== 'undefined' && window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'fi' || 'fi'
