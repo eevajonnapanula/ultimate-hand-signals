@@ -5,16 +5,33 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prepare": "husky install",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --ext js,jsx,ts,tsx .",
+    "stylelint": "stylelint **/**.css"
   },
   "dependencies": {
-    "next": "9.5.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "next": "^11.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/node": "^14.0.27",
-    "@types/react": "^16.9.46",
-    "typescript": "^3.9.7"
+    "@types/node": "^14.17.20",
+    "@types/react": "^16.14.15",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "typescript": "^3.9.10"
+  },
+  "lint-staged": {
+    "*.+(js|json|ts|tsx)": "npm run eslint",
+    "*.css": "npm run stylelint"
   }
 }

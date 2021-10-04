@@ -1,12 +1,19 @@
-import Document, { Html, Head, Main, NextScript } from "next/document"
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import { JSXElementConstructor, ReactElement, ReactFragment } from 'react'
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+interface GetInitialProps {
+  html: string
+  head?: JSX.Element[]
+  styles?: ReactElement<unknown, string | JSXElementConstructor<unknown>>[] | ReactFragment
+}
+
+class CustomDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext): Promise<GetInitialProps> {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang="fi">
         <Head />
@@ -19,4 +26,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument
+export default CustomDocument
