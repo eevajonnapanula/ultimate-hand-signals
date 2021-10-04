@@ -1,7 +1,8 @@
-import Seo from "../components/Seo"
-import { useTranslations } from "../hooks/useTranslations"
+import { NextPage } from 'next'
+import Seo from '../components/Seo'
+import { useTranslations } from '../hooks/useTranslations'
 
-const About = () => {
+const About: NextPage = () => {
   const translations = useTranslations()
   return (
     <>

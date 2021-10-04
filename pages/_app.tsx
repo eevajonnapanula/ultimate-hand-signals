@@ -1,24 +1,25 @@
-import { createContext, useMemo, useState, SetStateAction } from "react"
-import "../index.css"
-import Layout from "../components/Layout"
+import { createContext, useMemo, useState } from 'react'
+import '../index.css'
+import Layout from '../components/Layout'
+import { AppComponent } from 'next/dist/shared/lib/router/router'
 
 export const LanguageContext = createContext({
-  language: "fi",
-  changeLanguage: undefined,
+  language: 'fi',
+  changeLanguage: undefined
 })
 
-function MyApp({ Component, pageProps }) {
-  const storedLanguage =
-    typeof window !== "undefined" && window.localStorage.getItem("lang")
-      ? window.localStorage.getItem("lang")
-      : "fi" || "fi"
+const CustomApp: AppComponent = ({ Component, pageProps }) => {
+  const storedLanguage = typeof window !== 'undefined' && window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'fi' || 'fi'
   const [language, setLanguage] = useState(storedLanguage)
-  const changeLanguage = () => {
-    const langToSet = language === "fi" ? "en" : "fi"
-    window.localStorage.setItem("lang", langToSet)
-    setLanguage(langToSet)
-  }
-  const value = useMemo(() => ({ language, changeLanguage }), [language])
+
+  const value = useMemo(() => {
+    const changeLanguage = () => {
+      const langToSet = language === 'fi' ? 'en' : 'fi'
+      window.localStorage.setItem('lang', langToSet)
+      setLanguage(langToSet)
+    }
+    return { language, changeLanguage }
+  }, [language])
 
   return (
     <LanguageContext.Provider value={value}>
@@ -29,4 +30,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default CustomApp

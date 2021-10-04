@@ -1,5 +1,7 @@
-const Home = () => {
-  return <main></main>;
-};
+import { NextPage } from 'next'
 
-export default Home;
+const Home: NextPage = () => {
+  return <main></main>
+}
+
+export default Home
