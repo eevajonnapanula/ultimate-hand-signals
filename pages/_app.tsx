@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react'
 import '../index.css'
-import Layout from '../components/Layout/Layout'
 import { AppComponent } from 'next/dist/shared/lib/router/router'
 import { LanguageContext } from '../utils/languageContext'
 
@@ -19,9 +18,7 @@ const CustomApp: AppComponent = ({ Component, pageProps }) => {
 
   return (
     <LanguageContext.Provider value={value}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </LanguageContext.Provider>
   )
 }

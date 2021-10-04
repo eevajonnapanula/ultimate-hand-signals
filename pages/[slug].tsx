@@ -1,9 +1,9 @@
 import { GetServerSideProps, NextPage } from 'next'
 import { useContext } from 'react'
 import Signal from '../components/pages/Signal/Signal'
-import Seo from '../components/Seo'
 import signals, { Signal as SignalType } from '../data/signals'
 import { LanguageContext } from '../utils/languageContext'
+import Layout from '../components/Layout/Layout'
 
 interface SignalProps {
   signal: SignalType
@@ -13,10 +13,9 @@ const SignalPage: NextPage<SignalProps> = ({ signal }) => {
   const { language } = useContext(LanguageContext)
 
   return (
-    <>
-      <Seo title={signal.translations[language].name} />
+    <Layout title={signal.translations[language].name}>
       <Signal signal={signal} />
-    </>
+    </Layout>
   )
 }
 

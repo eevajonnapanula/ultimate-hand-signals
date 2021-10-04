@@ -1,16 +1,16 @@
-import Seo from '../components/Seo'
+import Seo from '../components/Layout/Seo'
 import { useTranslations } from '../hooks/useTranslations'
 import { NextPage } from 'next'
 import Signals from '../components/pages/Signals/Signals'
+import Layout from '../components/Layout/Layout'
 
 const SignalsPage: NextPage = () => {
   const translations = useTranslations()
 
   return (
-    <>
-      <Seo title={translations.handSignals} />
+    <Layout title={translations.handSignals}>
       <Signals />
-    </>
+    </Layout>
   )
 }
 
