@@ -1,5 +1,5 @@
 const Home = (): JSX.Element => {
-  return <main></main>
+  return <section>Work in Progress</section>
 }
 
 export default Home
